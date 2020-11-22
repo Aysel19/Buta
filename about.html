@@ -1,0 +1,894 @@
+ <html>
+
+ <head>
+ 	<meta charset="utf-8">
+ 	<title>Buta Qrup</title>
+ 	<!-- Stylesheets -->
+	 <link href="css/bootstrap.css" rel="stylesheet">
+	
+ 	<link href="css/style.css" rel="stylesheet">
+ 	<link href="css/slick.css" rel="stylesheet">
+ 	<link href="css/responsive.css" rel="stylesheet">
+ 	<!--Color Switcher Mockup-->
+ 	<link href="css/color-switcher-design.css" rel="stylesheet">
+ 	<!--Color Themes-->
+ 	<link id="theme-color-file" href="css/color-themes/default-theme.css" rel="stylesheet">
+
+ 	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+ 	<link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+ 	<!-- Responsive -->
+ 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+ 	<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+ 	<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+ </head>
+
+ <style>
+ 	/*------------------------ Theme Counter --------------------*/
+ 	.theme-counter {
+ 		text-align: center;
+ 		border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+ 		padding: 130px 0 50px 0;
+ 	}
+
+ 	.theme-counter.fix {
+ 		padding-bottom: 120px;
+ 	}
+
+ 	.theme-counter h2 {
+ 		font-size: 50px;
+ 	}
+
+ 	.theme-counter p {
+ 		font-family: 'Lato', sans-serif;
+ 		font-size: 20px;
+ 		color: #aeaeae;
+ 		margin: 5px 0 40px 0;
+ 	}
+
+ 	/*------------------------ Our Portfolio ----------------------*/
+ 	.our-portfolio {
+ 		padding: 50px 0 0px 0;
+ 	}
+
+ 	.our-portfolio .theme-title:before {
+ 		content: 'BUTA GRUP';
+ 		font-size: 220px;
+ 		color: rgba(9, 9, 19, 0.03);
+ 		position: absolute;
+ 		top: 0;
+ 		left: -270px;
+ 		font-weight: 600;
+ 		line-height: 175px;
+ 	}
+
+ 	.our-portfolio .theme-title a {
+ 		position: absolute;
+ 		right: 0;
+ 		bottom: 0;
+ 		width: 200px;
+ 		line-height: 51px;
+ 		border: 2px solid rgba(0, 0, 0, 0.07);
+ 		border-radius: 5px;
+ 		text-transform: uppercase;
+ 		text-align: center;
+ 		font-weight: 600;
+ 		font-size: 15px;
+ 		color: #00000a;
+ 	}
+
+ 	.our-portfolio .theme-title a:hover {
+ 		color: #fff;
+ 	}
+
+ 	.our-portfolio .wrapper {
+ 		padding: 0 35px;
+ 		margin-top: 130px;
+ 	}
+
+ 	.our-portfolio .wrapper .image img {
+ 		width: 100%;
+ 		-webkit-transition: all 0.6s ease-in-out;
+ 		transition: all 0.6s ease-in-out;
+ 	}
+
+ 	.our-portfolio .wrapper .image {
+ 		position: relative;
+ 		overflow: hidden;
+ 	}
+
+ 	.our-portfolio .wrapper .image .opacity {
+ 		position: absolute;
+ 		top: 5px;
+ 		left: 5px;
+ 		right: 5px;
+ 		bottom: 5px;
+ 		background: rgba(255, 255, 255, 0.95);
+ 		opacity: 0;
+ 		-webkit-transform: scale(0.8);
+ 		transform: scale(0.8);
+ 	}
+
+ 	.our-portfolio .wrapper .image:hover .opacity {
+ 		opacity: 1;
+ 		border-radius: 0;
+ 		-webkit-transform: scale(1);
+ 		transform: scale(1);
+ 	}
+
+ 	.our-portfolio .wrapper .image .opacity a {
+ 		font: 20px Poppins;
+ 		font-weight: bold;
+ 		display: block;
+ 		height: 80px;
+ 		text-align: center;
+
+ 		position: relative;
+ 		top: 40%;
+ 	}
+
+ 	.our-portfolio .wrapper .image .opacity a:before {
+ 		width: 2px;
+ 		height: 100%;
+ 		left: 50%;
+ 		margin-left: -1px;
+ 		bottom: 0;
+ 	}
+
+ 	.our-portfolio .wrapper .image .opacity a:after {
+ 		width: 100%;
+ 		height: 2px;
+ 		left: 0;
+ 		margin-top: -1px;
+ 		top: 50%;
+ 	}
+
+ 	.our-portfolio .wrapper .item {
+ 		margin: 0 15px;
+ 	}
+
+ 	/*--------------------- About Text ---------------------*/
+ 	.about-text {
+ 		padding-bottom: 50px;
+ 	}
+
+ 	.about-text .title {
+ 		text-align: center;
+ 	}
+
+ 	.about-text .title h6 {
+ 		letter-spacing: 1px;
+ 		color: rgba(0, 0, 0, 0.4);
+ 		text-transform: uppercase;
+ 	}
+
+ 	.about-text .title h2 {
+ 		line-height: 60px;
+ 		margin: 25px 0 100px 0;
+ 	}
+
+ 	.about-text .about-tab-wrapper {
+ 		margin: 110px auto 0 auto;
+ 	}
+
+ 	.about-text .about-tab-wrapper .nav {
+ 		width: 160px;
+ 		border: none;
+ 	}
+
+ 	.about-text .about-tab-wrapper .nav-tabs>li {
+ 		display: block;
+ 		float: none;
+ 		margin: 0;
+ 	}
+
+ 	.about-text .about-tab-wrapper .nav-tabs>li>a {
+ 		font-size: 20px;
+ 		font-weight: 500;
+ 		color: rgba(0, 0, 0, 0.4);
+ 		background: transparent;
+ 		border: none;
+ 		padding: 0;
+ 		line-height: 58px;
+ 	}
+
+ 	.about-text .about-tab-wrapper .nav-tabs>li.active>a,
+ 	.about-text .about-tab-wrapper .nav-tabs>li.active>a:hover,
+ 	.about-text .about-tab-wrapper .nav-tabs>li.active>a:focus {
+ 		color: #000;
+ 	}
+
+ 	.about-text .about-tab-wrapper .tab-content {
+ 		width: calc(100% - 160px);
+ 		padding: 12px 0 0 20px;
+ 	}
+
+ 	.about-text .about-tab-wrapper .tab-content p {
+ 		line-height: 35px;
+ 		margin-bottom: 30px;
+ 		font-size: 18px;
+ 	}
+
+ 	/*-------------------- Our Team Style One ----------------------*/
+ 	.our-team-styleOne.inner-page {
+ 		padding-bottom: 80px;
+ 	}
+
+ 	.our-team-styleOne .title {
+ 		position: relative;
+ 		margin: 0 0 115px 0;
+ 	}
+
+ 	.our-team-styleOne .title h2 {
+ 		line-height: 55px;
+ 	}
+
+ 	.our-team-styleOne .title a {
+ 		width: 145px;
+ 		line-height: 46px;
+ 		border: 2px solid rgba(0, 0, 0, 0.07);
+ 		border-radius: 3px;
+ 		text-align: center;
+ 		font-weight: 700;
+ 		color: #000;
+ 		text-transform: uppercase;
+ 		letter-spacing: 1.2px;
+ 		position: absolute;
+ 		right: 0;
+ 		bottom: 10px;
+ 	}
+
+ 	.our-team-styleOne .title a:hover {
+ 		color: #fff;
+ 	}
+
+ 	.our-team-styleOne .single-team-member {
+ 		border-bottom: 1px solid rgba(108, 108, 108, 0.1);
+ 		padding-bottom: 25px;
+ 		margin-bottom: 90px;
+ 		text-align: center;
+ 	}
+
+ 	.our-team-styleOne .single-team-member .image {
+ 		position: relative;
+ 		overflow: hidden;
+ 	}
+
+ 	.our-team-styleOne .single-team-member .image img {
+ 		width: 100%;
+ 		-webkit-transition: all 0.6s ease-in-out;
+ 		transition: all 0.6s ease-in-out;
+ 	}
+
+ 	.our-team-styleOne .single-team-member .image .opacity {
+ 		position: absolute;
+ 		width: 100%;
+ 		height: 100%;
+ 		top: 0;
+ 		right: 0;
+ 		opacity: 0;
+ 		background: rgba(255, 255, 255, 0.95);
+ 		-webkit-transform: scale(0.8);
+ 		transform: scale(0.8);
+ 	}
+
+ 	.our-team-styleOne .single-team-member .image .opacity ul li {
+ 		display: inline-block;
+ 	}
+
+ 	.our-team-styleOne .single-team-member .image .opacity ul li a {
+ 		font-size: 20px;
+ 		margin: 0 10px;
+ 	}
+
+ 	.our-team-styleOne .single-team-member .image .opacity ul {
+ 		opacity: 0;
+ 		position: relative;
+ 		top: 50%;
+ 		-webkit-transform: translateY(-50%);
+ 		transform: translateY(-50%);
+ 	}
+
+ 	.our-team-styleOne .single-team-member:hover .image .opacity ul {
+ 		opacity: 1;
+ 	}
+
+ 	.our-team-styleOne .single-team-member:hover .image .opacity {
+ 		opacity: 1;
+ 		-webkit-transform: scale(1);
+ 		transform: scale(1);
+ 	}
+
+ 	.our-team-styleOne .single-team-member:hover .image img {
+ 		-webkit-transform: scale3D(1.1, 1.1, 1);
+ 		transform: scale3D(1.1, 1.1, 1);
+ 	}
+
+ 	.our-team-styleOne .single-team-member h6 {
+ 		font-weight: 500;
+ 		margin: 38px 0 3px 0;
+ 	}
+
+ 	.our-team-styleOne.style-two .single-team-member .image {
+ 		width: 270px;
+ 		height: 270px;
+ 		border-radius: 50%;
+ 		margin: 0 auto;
+ 	}
+
+ 	.our-team-styleOne.style-two .single-team-member .image .opacity {
+ 		border-radius: 50%;
+ 	}
+
+ 	.our-team-styleOne.style-two .single-team-member {
+ 		border: none;
+ 		padding-bottom: 0;
+ 	}
+ </style>
+<link href="css/responsive.css" rel="stylesheet">
+ <body>
+
+ 	<div class="page-wrapper">
+
+ 		<!-- Preloader -->
+ 		<div class="preloader"></div>
+
+ 		<!-- Main Header / Header Style Two-->
+ 		<header class="main-header">
+    	
+		<!--Header Top-->
+    	<div class="header-top">
+    		<div class="auto-container">
+				<div class="clearfix">
+					<!--Top Left-->
+					<div class="top-left">
+						<ul>
+							<li><span class="icon fa fa-map-marker"></span> İŞIK Küç. No:20, Tandoğan / ANKARA</li>
+						</ul>
+					</div>
+					<!--Top Right-->
+					<div class="top-right">
+						<div class="timing">İş vaxtları: Bazar Ertəsi - Cümə 09:00 - 18:00 </div>
+						<!--Social Box-->
+						<ul class="social-box">
+							<li><a href="#"><span class="fa fa-facebook"></span></a></li>
+							<li><a href="#"><span class="fa fa-twitter"></span></a></li>
+							<li><a href="#"><span class="fa fa-instagram"></span></a></li>
+							<li><a href="#"><span class="fa fa-youtube"></span></a></li>
+							<li><a href="#"><span class="fa fa-whatsapp"></span></a></li>
+						
+						</ul>
+						<!--Language-->
+                        <div class="language dropdown"><a class="btn btn-default dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#"><span class="flag-icon"><img src="images/icons/azerbaijan.png"  style="width: 20px;" alt=""/></span>Azərbaycanca &nbsp;<span class="icon fa fa-angle-down"></span></a>
+                        	<ul class="dropdown-menu style-one" aria-labelledby="dropdownMenu2">
+                                <li><a href="#">Türkçe</a></li>
+                                <li><a href="#">English</a></li>
+                                <li><a href="#">Русский</a></li>
+                                
+                            </ul>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+    	
+    	<!--Header-Upper-->
+        <div class="header-upper">
+        	<div class="auto-container">
+            	<div class="clearfix">
+                	
+                	<div class="pull-left logo-box">
+                    	<div class="logo"><a href="index-2.html"><img src="images/logobuta2.png" style="width: 250px; height: 90px;" alt="" title=""></a></div>
+                    </div>
+                    
+                    <div class="pull-right upper-right">
+                    	<div class="info-outer clearfix">
+							<!--Info Box-->
+							<div class="upper-column info-box">
+								<div class="icon-box"><span class="flaticon-contact-1"></span></div>
+								<ul>
+									<li><span>Buta</span> <br> 0850 28 82</li>
+								</ul>
+							</div>
+							
+							<!--Info Box-->
+							<div class="upper-column info-box">
+								<div class="icon-box"><span class="flaticon-email-2"></span></div>
+								<ul>
+									<li><span>Mail</span> <br>info@butagrup.com.tr</li>
+								</ul>
+							</div>
+							
+							<!--Info Box-->
+							<div class="upper-column info-box">
+								
+							</div>
+                        </div>
+						
+						<!--Header Lower-->
+						<div class="header-lower">
+							
+							<div class="nav-outer clearfix">
+								<!-- Main Menu -->
+								<nav class="main-menu navbar-expand-md">
+									<div class="navbar-header">
+										<!-- Toggle Button -->    	
+										<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+										</button>
+									</div>
+									
+									<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+										<ul class="navigation clearfix">
+											<li><a href="index-2.html">Ana Səhifə</a>
+											
+											</li>
+											<li><a href="about.html">Biz kimik?</a>
+												
+											</li>
+											<li><a href="services.html">Nə edirik?</a>
+												
+											</li>
+											<li><a href="project.html">Nə etdik?</a>
+												
+											</li>
+											<li><a href="news.html">Xəbərlər</a>
+												
+											</li>
+											
+											<li><a href="contact.html">Əlaqə</a></li>
+										</ul>
+									</div>
+								</nav>
+								
+								<!-- Main Menu End-->
+								<div class="outer-box clearfix">
+								
+									
+									<div class="option-box">
+									
+										
+										<!--Search Box-->
+										<div class="search-box-outer">
+											<div class="dropdown">
+												<button class="search-box-btn dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-search"></span></button>
+												<ul class="dropdown-menu pull-right search-panel" aria-labelledby="dropdownMenu3">
+													<li class="panel-outer">
+														<div class="form-container">
+															<form method="post" action="http://ary-themes.com/html/buliten/blog.html">
+																<div class="form-group">
+																	<input type="search" name="field-name" value="" placeholder="Search Here" required>
+																	<button type="submit" class="search-btn"><span class="fa fa-search"></span></button>
+																</div>
+															</form>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+										
+									</div>
+								</div>
+								<div class="side-curve"></div>
+							</div>
+							
+						</div>
+						<!--End Header Lower-->
+						
+                    </div>
+                    
+                </div>
+				
+            </div>
+        </div>
+        <!--End Header Upper-->
+        
+		<!--Sticky Header-->
+        <div class="sticky-header">
+        	<div class="auto-container clearfix">
+            	<!--Logo-->
+            	<div class="logo pull-left">
+                	<a href="index-2.html" class="img-responsive"><img src="images/buta.png" alt="" title="" style="width: 150px; height: 50px;"></a>
+                </div>
+                
+                <!--Right Col-->
+                <div class="right-col pull-right">
+                	<!-- Main Menu -->
+                    <nav class="main-menu navbar-expand-md">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        
+                        <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent1">
+                            <ul class="navigation clearfix">
+                                <li><a href="index-2.html">Ana Səhifə</a>
+											
+											</li>
+											<li><a href="about.html">Biz kimik?</a>
+												
+											</li>
+											<li><a href="services.html">Nə edirik?</a>
+												
+											</li>
+											<li><a href="project.html">Nə etdik?</a>
+												
+											</li>
+											<li><a href="news.html">Xəbərlər</a>
+												
+											</li>
+											
+											<li><a href="contact.html">Əlaqə</a></li>
+                            </ul>
+                        </div>
+                    </nav><!-- Main Menu End-->
+                </div>
+                
+            </div>
+        </div>
+        <!--End Sticky Header-->
+    
+    </header>
+    <!--End Main Header -->
+ <section class="main-slider">
+    	
+        <div class="main-slider-carousel owl-carousel owl-theme">
+            
+          
+        </div>
+		<!-- Left Title -->
+		<div class="left-title">manufacturers</div>
+		
+		<div class="auto-container">
+			<!-- Social Box -->
+			<div class="social-box">
+				<a href="#"><span class="fa fa-facebook"></span></a>
+				<a href="#"><span class="fa fa-twitter"></span></a>
+				<a href="#"><span class="fa fa-skype"></span></a>
+				<a href="#"><span class="fa fa-google-plus"></span></a>
+			</div>
+		</div>
+		<!--Scroll Dwwn Btn-->
+        <div class="mouse-btn-down scroll-to-target" data-target=".welcome-section"></div>
+    </section>
+    <!--End Main Slider-->
+	  <section class="page-title" style="background-image:url(images/background/biz-kimik-back.jpg); padding-top: 300px;">
+    	<div class="auto-container">
+        	<h2>Biz kimik?</h2>
+            <ul class="page-breadcrumb">
+            	<li><a href="index-2.html">Ana Səhifə</a></li>
+                <li>Biz kimik?</li>
+            </ul>
+        </div>
+    </section>
+ 		<!--End Page Title-->
+
+ 		<div id="page" class="our-portfolio">
+ 			<div class="container">
+ 				<h2 style="text-align: center;">BUTA QRUP MEDİA İNFORMASİYA TEXNOLOGİYALARI SƏNAYE VƏ TİCARƏT ANONİM
+ 					ŞİRKƏTİ</h2>
+ 				<img src="images/resource/about-buta.jpg" alt="var">
+ 			</div> <!-- /.container -->
+ 		</div>
+
+
+ 		<div class="about-text">
+ 			<div class="container">
+ 				<img src="./images/inner-page/1.jpg" alt="">
+ 				<div class="about-tab-wrapper clearfix">
+ 					<ul class="nav nav-tabs float-left">
+ 						<li class="active"><a data-toggle="tab" href="#history">Haqqımızda</a></li>
+ 						<!--<li><a data-toggle="tab" href="#ekibimiz">Ekibimiz</a></li>-->
+ 						<li><a data-toggle="tab" href="#referanslarimiz">Referanslarımız</a></li>
+ 						<!--<li><a data-toggle="tab" href="#vision">Hedefimiz</a></li>
+					<li><a data-toggle="tab" href="#contact">İletişim</a></li>-->
+ 					</ul>
+ 					<div class="tab-content float-left">
+ 						<div id="history" class="tab-pane fade in active show">
+ 							<p><b>Buta Qrup Media İnformasiya Texnologiyaları A.Ş. hərtərəfli bir İT qrupudur. Yaradıcı
+ 									heyət öz müştərilərinin bütün tələbatlarına A-dan Z-ə qədər xidmət edir. </b>
+ 								<br><br>
+ 								Bir korporativ şirkətin korporativ şəxsiyyətinin qurulmasından başlayaraq sosial media,
+ 								veb dizayn / proqram təminatı, E-Ticarət, qrafik dizayn, marka qorunması və rəqəmsal
+ 								marketinq kimi sahələrdə işlər görməkdədir. Layihələr, istər açar təslim, istərsə də
+ 								tək iş olsun, strateji planlara uyğun olaraq güclü bir şəkildə başlayır. Nəticədə,
+ 								müştəri yalnız hazırlanmış işləri təsdiqləyir. Buta Qrup bütün bunları mümkün olan ən
+ 								aşağı büdcələrlə edir! Müştərilərimizin xəyallarını öz xəyallarımız kimi görürük və işə
+ 								belə başlayırıq. Müştərimizin pulunu öz pulumuz kimi görürük, onu boşa xərcləmirik.
+ 								Fərqli ol, ya da yox ol prinsipini əsas prinsip olaraq götürürük. Əvvəlcə işi, sonra
+ 								hədəf kütləni başa düşürük, hər fikri buna görə fikirləşirik. Sektorda görülən işləri
+ 								izləyirik, edilməmiş işləri axtarırıq. Müştərilərimizin rəqiblərinə istinad edirik,
+ 								lakin biz onları rəqib kimi görmürük. Bilirik ki, möhkəm bir komanda olmaq uğurun əsas
+ 								təməl daşıdır. Müştərilərimizlə uzunmüddətli əlaqələr qururuq. Müştərilərimizin sayına
+ 								deyil, keyfiyyətə əhəmiyyət veririk. Səmimi olmağı sevirik, ama ciddi olmamağı qəbul
+ 								edə bilmərik. İlk öncə araşdırırırq, xəyallarınızı xəyal edirik və sonra işi görürük.
+ 								Maraqlanırıq, oxuyuruq.</p>
+ 						</div> <!-- /#history -->
+ 						<div id="vision" class="tab-pane fade">
+ 						</div> <!-- /#vision -->
+ 						<div id="ekibimiz" class="tab-pane fade">
+
+
+
+
+ 							<!-- 
+	=============================================
+		Our Portfolio
+	============================================== 
+	-->
+ 							<div class="our-portfolio" style="margin-top:-180px; width:810px; height:1000px;">
+
+
+ 								<div class="wrapper">
+ 									<div class="row">
+ 										<div class="portfolio" style="width:780px;">
+
+
+
+ 										</div> <!-- /.portfolio-slider -->
+ 									</div> <!-- /.row -->
+ 								</div> <!-- /.wrapper -->
+ 							</div> <!-- /.our-portfolio -->
+
+
+
+
+
+
+
+
+
+
+
+
+ 						</div> <!-- /#ekibimiz -->
+ 						<div id="referanslarimiz" class="tab-pane fade">
+
+
+
+
+
+
+
+ 							<div class="row" style="margin-top: -40px;">
+ 								<div class="col-md-4 col-xs-6" style="height: 150px;">
+ 									<div class="client-img"><img src="./images/clients/bayburt.png" alt=""
+ 											style="width: 150px;"></div>
+ 								</div>
+ 								<div class="col-md-4 col-xs-6" style="height: 200px;">
+ 									<div class="client-img"><img src="./images/clients/agrobay.png" alt=""
+ 											style="width: 200px;"></div>
+ 								</div>
+ 								<div class="col-md-4 col-xs-6" style="height: 200px;">
+ 									<div class="client-img"><img src="./images/clients/binsaat.png" alt=""
+ 											style="width: 200px;"></div>
+ 								</div>
+ 								<div style="clear: both;"></div>
+ 								<div class="col-md-4 col-xs-6" style="height: 200px;">
+ 									<div class="client-img"><img src="./images/clients/hasanbeyciftligi.png" alt=""
+ 											style="width: 200px;"></div>
+ 								</div>
+ 								<div class="col-md-4 col-xs-6" style="height: 200px;">
+ 									<div class="client-img"><img src="./images/clients/ozgun.png" alt=""
+ 											style="width: 200px;"></div>
+ 								</div>
+ 								<div class="col-md-4 col-xs-6" style="height: 200px;">
+ 									<div class="client-img"><img src="./images/clients/senbay.png" alt=""
+ 											style="width: 200px;"></div>
+ 								</div>
+ 								<div style="clear: both;"></div>
+ 								<div class="col-md-4 col-xs-6" style="height: 200px;">
+ 									<div class="client-img"><img src="./images/clients/senbayp.png" alt=""
+ 											style="width: 200px;"></div>
+ 								</div>
+ 								<div class="col-md-4 col-xs-6" style="height: 200px;">
+ 									<div class="client-img"><img src="./images/clients/togo.png" alt=""
+ 											style="width: 200px; margin-top: -5rem;"></div>
+ 								</div>
+ 							</div>
+
+
+
+
+
+
+ 						</div>
+ 						<!-- /#contact -->
+ 						<div id="contact" class="tab-pane fade">
+ 						</div>
+ 						<!-- /#contact -->
+ 					</div>
+ 				</div> <!-- /.about-tab-wrapper -->
+ 			</div> <!-- /.container -->
+ 		</div> <!-- /.about-text -->
+
+
+
+
+
+ 		<!-- 
+	=============================================
+		Theme Counter
+	============================================== 
+	-->
+ 		<!-- Counter Box -->
+ 		<div class="counter-box">
+
+ 			<div class="fact-counter">
+ 				<div class="row clearfix statistic-add" style="margin-left: 8rem; margin-right: 8rem; box-shadow: 0px 0px 15px rgba(0,0,0,0.15);
+					margin-bottom: 3rem;">
+
+ 					<!--Column-->
+ 					<div class="column counter-column col-lg-4 col-md-4 col-sm-12 ">
+ 						<div class="inner wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
+ 							<div class="count-outer count-box">
+ 								<h4 class="counter-title">Tamamlanmış işlər</h4>
+ 								<span class="count-text" data-speed="3000" data-stop="26">0</span>+
+ 							</div>
+ 						</div>
+ 					</div>
+
+ 					<!--Column-->
+ 					<div class="column counter-column col-lg-4 col-md-4 col-sm-12">
+ 						<div class="inner wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
+ 							<div class="count-outer count-box">
+ 								<h4 class="counter-title">Davam edən işlər</h4>
+ 								<span class="count-text" data-speed="2500" data-stop="8">0</span>
+ 							</div>
+ 						</div>
+ 					</div>
+
+ 					<!--Column-->
+ 					<div class="column counter-column col-lg-4 col-md-4 col-sm-12">
+ 						<div class="inner wow fadeInLeft" data-wow-delay="900ms" data-wow-duration="1500ms">
+ 							<div class="count-outer count-box">
+ 								<h4 class="counter-title">Xoşbəxt müştəri</h4>
+ 								<span class="count-text" data-speed="2000" data-stop="18">0</span>+
+ 							</div>
+ 						</div>
+ 					</div>
+
+ 					<div class="column counter-column col-lg-4 col-md-4 col-sm-12 statictic-add-icerik">
+ 						<div class="inner wow fadeInLeft" data-wow-delay="900ms" data-wow-duration="1500ms">
+ 							<div class="count-outer count-box">
+ 								<h4 class="counter-title">Qəhvə</h4>
+ 								<span class="count-text" data-speed="2000" data-stop="472">0</span>
+ 							</div>
+ 						</div>
+ 					</div>
+
+ 				</div>
+
+ 			</div>
+
+ 		</div>
+
+
+
+
+
+ 		<!--Main Footer-->
+ 		<footer class="main-footer" style="background-image:url(images/background/footer-back.jpeg)">
+
+ 			<div class="auto-container">
+
+ 				<!--Widgets Section-->
+ 				<div class="widgets-section">
+ 					<div class="row clearfix">
+
+ 						<!--Footer Column-->
+ 						<div class="footer-column col-lg-4 col-md-6 col-sm-12">
+ 							<div class="footer-widget logo-widget">
+ 								<div class="logo">
+ 									<a href="index-2.html"><img src="images/logobuta2.png" alt="" width="50%" /></a>
+ 								</div>
+ 								<div class="text">Buta Qrup Media İnformasiya Texnologiyaları A.Ş. hərtərəfli bir İT
+ 									qrupudur. Yaradıcı heyət öz müştərilərinin bütün tələbatlarına A-dan Z-ə qədər
+ 									xidmət edir.<a href="#"> Haqqımızda
+ 										Davamı..</a>
+ 								</div>
+ 								<ul class="list-style-one">
+ 									<li><span class="icon flaticon-map-1"></span>İŞIK Küç. No:20, Tandoğan / ANKARA.
+ 									</li>
+ 									<li><span class="icon flaticon-mail"></span>info@butagrup.com.tr</li>
+ 									<li><span class="icon fa fa-phone"></span>0850 302 28 82</li>
+ 								</ul>
+ 							</div>
+ 						</div>
+
+ 						<!--Footer Column-->
+ 						<div class="footer-column col-lg-3 col-md-6 col-sm-12">
+ 							<div class="footer-widget links-widget">
+ 								<h2>REFERANSLARIMIZ</h2>
+ 								<div class="row clearfix">
+ 									<div class="column col-lg-6 col-md-6 col-sm-12">
+ 										<ul class="list">
+ 											<li><a href="#">Bayburt Grup</a></li>
+ 											<li><a href="#">Özgün Yapı</a></li>
+ 											<li><a href="#">Agrobay Seracılık</a></li>
+ 											<li><a href="#">Şenbay Madencilik</a></li>
+ 											<li><a href="#">Bayburt İnşaat </a></li>
+ 											<li><a href="#">TOGO</a></li>
+ 										</ul>
+ 									</div>
+ 								</div>
+ 							</div>
+ 						</div>
+
+ 						<!--Footer Column-->
+
+ 						<div class="footer-column work_block col-lg-5 col-md-12">
+ 							<h2>Təklif İstəyirəm</h2>
+ 							<form action="" id="workForm" class="wow fadeInUp" name="workForm" method="post"
+ 								style="visibility: visible; animation-name: fadeInUp;">
+
+ 								<p id="textim"><b>Salam, mənim adım <span contenteditable="true"></span>, Xidmətləriniz
+ 										haqqında məlumat və / və ya təkliflər almaq istərdim. məni xüsusilə
+ 										maraqlandıran mövzu (lar):
+ 										<span contenteditable="true"></span>.Əlaqə üçün telefon nömrəm: <span
+ 											contenteditable="true"></span> mənim e-poçt ünvanım: <span
+ 											contenteditable="true"></span> Təşəkkürlər.</b></p>
+ 								<input type="hidden" id="get" size="20" value="" name="names">
+ 								<input onclick="myFunction()" type="submit" value="Göndər">
+
+ 							</form>
+ 						</div>
+
+
+ 					</div>
+
+ 				</div>
+ 			</div>
+
+ 			<!-- Footer Bottom -->
+ 			<div class="footer-bottom">
+ 				<div class="auto-container">
+ 					<div class="row clearfix">
+
+ 						<!-- Copyright Column -->
+ 						<div class="copyright-column col-lg-6 col-md-12 col-sm-12">
+ 							<div class="copyright"><a href="https://www.templateshub.net">Templates Hub</a></div>
+ 						</div>
+
+ 						<!-- Social Column -->
+ 						<div class="social-column col-lg-6 col-md-12 col-sm-12">
+ 							<ul class="footer-nav">
+ 								<li><a href="#"><span class="fa fa-facebook"></span></a></li>
+ 								<li><a href="#"><span class="fa fa-twitter"></span></a></li>
+ 								<li><a href="#"><span class="fa fa-skype"></span></a></li>
+ 								<li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+ 							</ul>
+ 						</div>
+
+ 					</div>
+ 				</div>
+ 			</div>
+
+ 		</footer>
+
+
+
+
+ 	</div>
+ 	<!--End pagewrapper-->
+
+ 	
+ 	<script src="js/jquery.js"></script>
+ 	<script src="js/popper.min.js"></script>
+ 	<script src="js/bootstrap.min.js"></script>
+ 	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+ 	<script src="js/jquery.fancybox.js"></script>
+ 	<script src="js/appear.js"></script>
+ 	<script src="js/owl.js"></script>
+ 	<script src="js/wow.js"></script>
+ 	<script src="js/jquery-ui.js"></script>
+ 	<script src="js/script.js"></script>
+ 	<script src="js/color-settings.js"></script>
+ </body>
+
+ </html>
